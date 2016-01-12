@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import 'bootstrap-webpack';
 
 /* global styles for app */
 import './styles/app.scss';
@@ -11,7 +10,8 @@ import { Footer } from 'components/Footer';
 export class App extends Component {
   static propTypes = {
     children: React.PropTypes.any,
-  }
+  };
+
   render() {
     return (
       <section>

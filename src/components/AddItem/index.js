@@ -11,14 +11,13 @@ export class AddItem extends Component {
     fields: React.PropTypes.object.isRequired,
     items: React.PropTypes.array,
     addItem: React.PropTypes.func,
-  }
+  };
 
   constructor(props) {
     super(props);
-    this.onAdd = this.onAdd.bind(this);
   }
 
-  onAdd(event) {
+  onAdd = (event) => {
     if (this.props.fields.name.value) {
       /* add item*/
       this.props.addItem(this.props.fields);
@@ -27,11 +26,11 @@ export class AddItem extends Component {
       this.props.dispatch(reset('addItem'));
     }
     event.preventDefault();
-  }
+  };
 
   render() {
     const {
-      fields: {name},
+      fields: { name },
     } = this.props;
 
     return (
@@ -42,7 +41,7 @@ export class AddItem extends Component {
             className="form-control"
             placeholder="Enter something"
             {...name}
-            />
+          />
         </div>
         <div className="form-group">
           <button className="btn btn-default" onClick={this.onAdd}>
