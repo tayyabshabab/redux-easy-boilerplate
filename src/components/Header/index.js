@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
+/* helpers */
+// import { redirectTo } from '../../utils/helpers';
+
 /* component styles */
 import { styles } from './styles.scss';
 
 export class Header extends Component {
+  static propTypes = {
+    loggedIn: React.PropTypes.bool.isRequired,
+    logout: React.PropTypes.func.isRequired,
+  };
+
   render() {
     return (
       <header className={`${styles}`}>
@@ -24,11 +32,22 @@ export class Header extends Component {
                 <Link to="/list" activeClassName="active">
                   Redux
                 </Link>
+                <Link to="/login" activeClassName="active"
+                  className={this.props.loggedIn ? 'hidden' : ''}
+                >
+                  Login
+                </Link>
+                <Link to="/login" activeClassName="active"
+                  className={this.props.loggedIn ? '' : 'hidden'}
+                  onClick={this.props.logout}
+                >
+                  Logout
+                </Link>
               </nav>
             </div>
 
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4 hidden-xs text-right">
-              <a href="https://github.com/anorudes/redux-easy-boilerplate">
+              <a href="git@github.com:tayyabshabab/redux-easy-boilerplate.git">
                 Fork me on GitHub
               </a>
             </div>

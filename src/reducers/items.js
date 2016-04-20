@@ -1,3 +1,8 @@
+import {
+  ADD_ITEM,
+  DELETE_ITEM,
+} from '../actions/constants';
+
 const initialState = {
   items: [{
     text: 'React',
@@ -40,7 +45,7 @@ const initialState = {
 
 export function items(state = initialState, action) {
   switch (action.type) {
-  case 'ADD_ITEM':
+  case ADD_ITEM:
     return {
       ...state,
       items: [
@@ -50,7 +55,7 @@ export function items(state = initialState, action) {
       ],
     };
 
-  case 'DELETE_ITEM':
+  case DELETE_ITEM:
     return {
       ...state,
       items: [

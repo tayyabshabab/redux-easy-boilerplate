@@ -1,4 +1,4 @@
-Redux Easy Boilerplate
+Redux Easy Boilerplate (Login component added)
 =========================
 
 ![http://anorudes.github.io/redux-easy-boilerplate/](https://raw.githubusercontent.com/anorudes/redux-easy-boilerplate/569905d1aabc33ce385b1895984141764d364b54/gh/browser.png)

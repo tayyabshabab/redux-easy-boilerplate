@@ -12,7 +12,7 @@ export class Footer extends Component {
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <a className="github-button"
-              href="https://github.com/anorudes/redux-easy-boilerplate"
+              href="https://github.com/tayyabshabab/redux-easy-boilerplate.git"
               data-icon="octicon-star"
               data-count-href="/anorudes/redux-easy-boilerplate/stargazers"
               data-count-api="/repos/anorudes/redux-easy-boilerplate#stargazers_count"
